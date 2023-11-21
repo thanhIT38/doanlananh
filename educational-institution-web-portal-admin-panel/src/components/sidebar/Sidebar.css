@@ -1,0 +1,188 @@
+#adminSidebar {
+  min-height: 86vh;
+  width: 350px;
+  background: #ffffff;
+  float: left;
+}
+
+.adminNavbar-link a.active {
+  background: #000;
+}
+
+.adminNavbar-link {
+  background-color: #f5f5f5e7;
+}
+
+.adminNavbar-link.active {
+  color: #ffffff !important;
+  background: #244c63ad;
+}
+
+.dropdown-menu {
+  background: #f3f7f8ad;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-menu ul li {
+  width: 260px;
+}
+.dropdown-menu ul li a {
+  background: aliceblue;
+  border: thin solid #c5dfe77a;
+  padding: 5px 20px;
+  height: 50px;
+  line-height: 40px;
+}
+
+.adminSidebar-links:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+
+
+
+/* Admin Responsive Sidebar  */
+
+#adminResponsiveSidebar {
+  background: #ffffff;
+  float: left;
+  position: absolute;
+  top: 123px;
+  /* left: -350px; */
+  height: 100vh;
+  width: 350px;
+}
+
+
+/* Modal Content */
+
+.modal {
+  position: fixed;
+  height: 550px;
+  overflow-y: auto;
+  max-width: 750px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new sidebar */
+
+
+
+.sidebar {
+  width: 300px;
+  height: 80vh;
+  background-color: #ffffff;
+  position: absolute;
+  left: -480px;
+  z-index: 99;
+  /*Initiallyhidethesidebar*/transition: left 0.2s;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+}
+
+.menu-bar {
+  color: #ffffff;
+  background-color: transparent;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  right: 8.4px;
+  top: 88px;
+  width: 60px;
+  height: 56px;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.sidebar.open {
+  left: 0; /* Move the sidebar to the left to show it */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-button {
+  top: 0;
+  position: absolute;
+  right: 0;
+  /* background: #244c63ad; */
+  padding: 12px 15px;
+  color: #000;
+  font-size: 20px;
+}
+
+ /* @media (max-width: 1023px) { 
+  #adminSidebar {
+    overflow: hidden !important;
+  }  
+ } */
+ 

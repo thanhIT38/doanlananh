@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@200;300;400;500&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.number-font {
+  font-family: "Anek Bangla";
+}
+
+#blankMap {
+  position: absolute;
+  width: 100%;
+  background-repeat: repeat;
+  z-index: -1;
+  background-image: url("../public/assets/blankMap.png");
+  background-size: 174px 241px;
+}
+
+
+/* Table */
+
+.vertical-scrollMain {
+  overflow-x: scroll;
+}
+
+@media (max-width: 1025px) {
+  .vertical-scroll {
+    overflow-x: scroll;
+    width: 991px;
+  }
+}

@@ -1,0 +1,10 @@
+.teachers-card .teachers-card-img {
+  height: 161px;
+  width: 141px;
+}
+
+#teachers .teachers-AllTeachersBtn a {
+  padding: 10px 30px;
+  text-decoration: underline;
+  background: #79929C;
+}
