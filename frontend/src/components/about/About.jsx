@@ -6,11 +6,18 @@ import { getAllteacher } from "../apis/newApi";
 
 const About = () => {
   const [profiles, setprofiles] = useState([]);
-  useEffect(async () => {
-    const about = await getmuctieu();
-    setprofiles(about);
-  }, []);
+  const fetchData = async () => {
+    try {
+      const about = await getmuctieu();
+      setprofiles(about);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <React.Fragment>
       <div id="about" className="mt-5">

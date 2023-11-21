@@ -3,10 +3,17 @@ import { getAllquanly } from "../../../../components/apis/newApi";
 
 const ManagementCommitte = () => {
   const [managerData, setmanagerData] = useState([]);
+  const fetchData = async () => {
+    try {
+      const about = await getAllquanly();
+      setmanagerData(about);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
-  useEffect(async () => {
-    const about = await getAllquanly();
-    setmanagerData(about);
+  useEffect(() => {
+    fetchData();
   }, []);
 
   return (

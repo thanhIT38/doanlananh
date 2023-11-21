@@ -5,11 +5,17 @@ import { getAllteacher } from "../apis/newApi";
 
 const Teachers = () => {
   const [teacher, setteacher] = useState([]);
+  const fetchData = async () => {
+    try {
+      const about = await getAllteacher();
+      setteacher(about);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
-  useEffect(async () => {
-    const about = await getAllteacher();
-    setteacher(about);
-    console.log(teacher);
+  useEffect(() => {
+    fetchData();
   }, []);
 
   return (
@@ -32,8 +38,8 @@ const Teachers = () => {
                 </picture>
               </div>
               <div className="teachers-card-identity">
-                <h4 className="font-medium text-md">{teacher.name}</h4>
-                <h5>{teacher.designation}</h5>
+                <h4 className="font-medium text-md">Họ tên :{teacher.name}</h4>
+                <h5>Chức vụ: {teacher.chucvu}</h5>
                 <h6>Trường đại học HN</h6>
               </div>
             </div>
